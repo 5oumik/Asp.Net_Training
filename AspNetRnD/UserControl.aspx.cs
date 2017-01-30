@@ -16,10 +16,15 @@ namespace AspNetRnD
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Write(CalendarUserControl.SelectedDate);
-            Button1.Click();
-            
+            Response.Write(CustomCalendar.SelectedDate.ToShortDateString());
         }
+
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
+        //    Response.Write(CalendarUserControl.SelectedDate);
+        //    //Button1.Click(sender);
+
+        //}
 
     }
 }

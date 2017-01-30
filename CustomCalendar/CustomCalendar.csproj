@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D2D634A7-0F06-4C5E-B40F-1B5C3BDA2D72}</ProjectGuid>
+    <ProjectGuid>{3791333A-B6C2-4EDB-BA24-B7E6087D355F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspNetRnD</RootNamespace>
-    <AssemblyName>AspNetRnD</AssemblyName>
+    <RootNamespace>CustomCalendar</RootNamespace>
+    <AssemblyName>CustomCalendar</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,10 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomCalendar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CustomCalendar\bin\CustomCalendar.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -80,35 +77,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CalendarUserControl.ascx" />
-    <Content Include="Images\Calendar.jpg" />
-    <Content Include="MultiView.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Panel.aspx" />
-    <Content Include="UserControl.aspx" />
-    <Content Include="Validations.aspx" />
-    <Content Include="WizardControl.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,64 +106,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AspNetControls.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AspNetControls.aspx.cs">
-      <DependentUpon>AspNetControls.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AspNetControls.aspx.designer.cs">
-      <DependentUpon>AspNetControls.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CalendarUserControl.ascx.cs">
-      <DependentUpon>CalendarUserControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CalendarUserControl.ascx.designer.cs">
-      <DependentUpon>CalendarUserControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="MultiView.aspx.cs">
-      <DependentUpon>MultiView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MultiView.aspx.designer.cs">
-      <DependentUpon>MultiView.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Panel.aspx.cs">
-      <DependentUpon>Panel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Panel.aspx.designer.cs">
-      <DependentUpon>Panel.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="CustomCalendar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl.aspx.cs">
-      <DependentUpon>UserControl.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControl.aspx.designer.cs">
-      <DependentUpon>UserControl.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Validations.aspx.cs">
-      <DependentUpon>Validations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Validations.aspx.designer.cs">
-      <DependentUpon>Validations.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WizardControl.aspx.cs">
-      <DependentUpon>WizardControl.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WizardControl.aspx.designer.cs">
-      <DependentUpon>WizardControl.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -189,9 +127,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52917</DevelopmentServerPort>
+          <DevelopmentServerPort>55321</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52917/</IISUrl>
+          <IISUrl>http://localhost:53889/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

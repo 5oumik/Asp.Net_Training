@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
         <cc1:CustomCalendar ID="CustomCalendar" runat="server" ImageButtonImageUrl="Images/Calendar.jpg"></cc1:CustomCalendar>
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Show Date" OnClick="Button1_Click" />
         <%--<cuc:CalendarUserControl SelectedDate="01/01/2017" runat="server" ID="CalendarUserControl" />
         <asp:Button ID="Button1" runat="server" Text="Print Date" OnClick="Button1_Click" />--%>
 
